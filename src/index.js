@@ -11,6 +11,7 @@ function App() {
         <Pizza4 />
         <Pizza5 />
         <Pizza6 />
+        {Footer()}
     </div>
     ); 
 }
@@ -86,7 +87,16 @@ function Menu() {
             <Pizza />
             <Pizza2 />
         </div>
+    );
+}
+
+function Footer() {
+    const currentHour = new Date().getHours();
+    const isOpen = currentHour >= 10 && currentHour <=22;
+    return (
+        <footer className="footer">{isOpen ? "We're currently open" : "We're currently close"}</footer>
     )
 }
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
