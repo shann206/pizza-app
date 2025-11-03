@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css"
 
 function App() {
     return (
-    <div>
+    <div className="container">
         <Header />
-        <Pizza />
-        <Pizza2 />
+        {Menu()}
         <Pizza3 />
         <Pizza4 />
         <Pizza5 />
@@ -79,6 +79,14 @@ function Pizza6() {
     );
 }
 
-
+function Menu() {
+    return (
+        <div className="menu">
+            <h2>Our Menu</h2>
+            <Pizza />
+            <Pizza2 />
+        </div>
+    )
+}
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
