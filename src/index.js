@@ -16,7 +16,7 @@ function App() {
 }
 
 function Header() {
-    return <h1>Tan Zhi Shan's Pizza Co.</h1>;
+    return <h1 style={{color: "orange", fontSize: 48, textTransform: "uppercase"}}>Tan Zhi Shan's Pizza Co.</h1>;
 }
 
 function Pizza() {
